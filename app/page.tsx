@@ -13,6 +13,7 @@ const featuredPost = {
   authorName: "Greg Hooper",
   authorAvatarSrc: authorAvatar,
   authorAvatarAlt: "Greg Hooper",
+  url: "#",
 };
 
 export default function Home() {

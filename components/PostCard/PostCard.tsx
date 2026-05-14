@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
 import "./PostCard.css";
+import Link from "next/link";
 
 type PostCardProps = {
   category: string;
@@ -13,6 +14,7 @@ type PostCardProps = {
   authorAvatarSrc: StaticImageData;
   authorAvatarAlt: string;
   priority?: boolean;
+  url: string;
 };
 
 function PostCard({
@@ -26,6 +28,7 @@ function PostCard({
   authorAvatarSrc,
   authorAvatarAlt,
   priority = false,
+  url,
 }: PostCardProps) {
   return (
     <article className="PostCard">
@@ -41,7 +44,9 @@ function PostCard({
       <div className="PostCard__Content">
         <p className="PostCard__Category">{category}</p>
         <p className="PostCard__Published">{publishedAt}</p>
-        <h1 className="PostCard__Title">{title}</h1>
+        <h1 className="PostCard__Title">
+          <Link href={url}>{title}</Link>
+        </h1>
         <p className="PostCard__Description">{description}</p>
       </div>
 
@@ -59,5 +64,4 @@ function PostCard({
   );
 }
 
-
-export default PostCard
+export default PostCard;
