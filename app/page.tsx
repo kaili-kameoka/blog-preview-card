@@ -3,64 +3,40 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
+    <main className={styles.page}>
+      <article className={styles.card} aria-labelledby="article-title">
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+          className={styles.illustration}
+          src="/illustration-article.svg"
+          alt=""
+          width={336}
+          height={200}
           priority
         />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+        <div className={styles.content}>
+          <p className={styles.category}>Learning</p>
+          <p className={styles.published}>Published 21 Dec 2023</p>
+          <h1 className={styles.title} id="article-title">
+            HTML &amp; CSS foundations
+          </h1>
+          <p className={styles.description}>
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
           </p>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className={styles.author}>
+          <Image
+            className={styles.avatar}
+            src="/image-avatar.webp"
+            alt=""
+            width={32}
+            height={32}
+          />
+          <p>Greg Hooper</p>
         </div>
-      </main>
-    </div>
+      </article>
+    </main>
   );
 }
