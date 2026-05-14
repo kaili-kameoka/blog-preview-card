@@ -2,12 +2,12 @@
   width: min(100%, 384px);
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding: 24px;
-  background: var(--white);
-  border: 1px solid var(--gray-950);
+  gap: var(--spacing-200);
+  padding: var(--spacing-200);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-950);
   border-radius: 20px;
-  box-shadow: 8px 8px 0 var(--gray-950);
+  box-shadow: var(--spacing-100) var(--spacing-100) 0 var(--color-gray-950);
 }
 
 .PostCard__Illustration {
@@ -21,51 +21,36 @@
 .PostCard__Content {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--spacing-150);
 }
 
 .PostCard__Category {
   width: fit-content;
-  padding: 4px 12px;
-  color: var(--gray-950);
-  background: var(--yellow);
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 1.5;
+  padding: var(--spacing-50) var(--spacing-150);
+  color: var(--color-gray-950);
+  background: var(--color-yellow);
+  border-radius: var(--spacing-50);
 }
 
 .PostCard__Published {
-  color: var(--gray-950);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.5;
+  color: var(--color-gray-950);
 }
 
 .PostCard__Title {
-  color: var(--gray-950);
-  font-size: 24px;
-  font-weight: 800;
-  line-height: 1.5;
+  color: var(--color-gray-950);
   cursor: pointer;
   transition: color 150ms ease;
 }
 
 .PostCard__Description {
-  color: var(--gray-500);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
+  color: var(--color-gray-500);
 }
 
 .PostCard__Author {
   display: flex;
   align-items: center;
-  gap: 12px;
-  color: var(--gray-950);
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 1.5;
+  gap: var(--spacing-150);
+  color: var(--color-gray-950);
 }
 
 .PostCard__Avatar {
@@ -75,7 +60,7 @@
 
 @media (hover: hover) and (pointer: fine) {
   .PostCard__Title:hover {
-    color: var(--yellow);
+    color: var(--color-yellow);
   }
 }
 

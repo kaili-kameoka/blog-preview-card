@@ -1,12 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap");
 
 :root {
-  --yellow: #f4d04e;
-  --gray-950: #111111;
-  --gray-500: #6b6b6b;
-  --white: #ffffff;
+  --color-yellow: #f4d04e;
+  --color-gray-950: #111111;
+  --color-gray-500: #6b6b6b;
+  --color-white: #ffffff;
+
   --font-sans: "Figtree", Arial, Helvetica, sans-serif;
-  --page-gutter: 24px;
+  --font-size-text-preset-1: 24px;
+  --font-size-text-preset-2: 16px;
+  --font-size-text-preset-3: 14px;
+  --font-weight-medium: 500;
+  --font-weight-extra-bold: 800;
+  --line-height-text-preset: 1.5;
+  --letter-spacing-text-preset: 0;
+
+  --spacing-50: 4px;
+  --spacing-100: 8px;
+  --spacing-150: 12px;
+  --spacing-200: 24px;
+
+  --page-gutter: var(--spacing-200);
 }
 
 html {
@@ -24,8 +38,8 @@ body {
   display: grid;
   place-items: center;
   padding: var(--page-gutter);
-  color: var(--gray-950);
-  background: var(--yellow);
+  color: var(--color-gray-950);
+  background: var(--color-yellow);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -40,4 +54,32 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.TextPreset1,
+.TextPreset2,
+.TextPreset3,
+.TextPreset3Bold {
+  line-height: var(--line-height-text-preset);
+  letter-spacing: var(--letter-spacing-text-preset);
+}
+
+.TextPreset1 {
+  font-size: var(--font-size-text-preset-1);
+  font-weight: var(--font-weight-extra-bold);
+}
+
+.TextPreset2 {
+  font-size: var(--font-size-text-preset-2);
+  font-weight: var(--font-weight-medium);
+}
+
+.TextPreset3 {
+  font-size: var(--font-size-text-preset-3);
+  font-weight: var(--font-weight-medium);
+}
+
+.TextPreset3Bold {
+  font-size: var(--font-size-text-preset-3);
+  font-weight: var(--font-weight-extra-bold);
 }
