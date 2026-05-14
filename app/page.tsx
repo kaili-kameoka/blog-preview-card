@@ -1,4 +1,6 @@
 import PostCard from "@/components/PostCard/PostCard";
+import authorAvatar from "@/public/image-avatar.webp";
+import articleIllustration from "@/public/illustration-article.svg";
 
 const featuredPost = {
   category: "Learning",
@@ -6,9 +8,11 @@ const featuredPost = {
   title: "HTML & CSS foundations",
   description:
     "These languages are the backbone of every website, defining structure, content, and presentation.",
-  illustrationSrc: "/illustration-article.svg",
+  illustrationSrc: articleIllustration,
+  illustrationAlt: "Abstract illustration of HTML and CSS learning tools",
   authorName: "Greg Hooper",
-  authorAvatarSrc: "/image-avatar.webp",
+  authorAvatarSrc: authorAvatar,
+  authorAvatarAlt: "Greg Hooper",
 };
 
 export default function Home() {

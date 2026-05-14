@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { StaticImageData } from "next/image";
 import "./PostCard.css";
 
 type PostCardProps = {
@@ -6,11 +7,11 @@ type PostCardProps = {
   publishedAt: string;
   title: string;
   description: string;
-  illustrationSrc: string;
-  illustrationAlt?: string;
+  illustrationSrc: StaticImageData;
+  illustrationAlt: string;
   authorName: string;
-  authorAvatarSrc: string;
-  authorAvatarAlt?: string;
+  authorAvatarSrc: StaticImageData;
+  authorAvatarAlt: string;
   priority?: boolean;
 };
 
@@ -20,10 +21,10 @@ function PostCard({
   title,
   description,
   illustrationSrc,
-  illustrationAlt = "",
+  illustrationAlt,
   authorName,
   authorAvatarSrc,
-  authorAvatarAlt = "",
+  authorAvatarAlt,
   priority = false,
 }: PostCardProps) {
   return (
