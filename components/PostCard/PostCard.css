@@ -38,8 +38,16 @@
 
 .PostCard__Title {
   color: var(--color-gray-950);
-  cursor: pointer;
+}
+
+.PostCard__TitleLink {
   transition: color 150ms ease;
+}
+
+.PostCard__TitleLink:focus-visible {
+  color: var(--color-yellow);
+  outline: 2px solid var(--color-yellow);
+  outline-offset: var(--spacing-50);
 }
 
 .PostCard__Description {
@@ -59,7 +67,7 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .PostCard__Title:hover {
+  .PostCard__TitleLink:hover {
     color: var(--color-yellow);
   }
 }

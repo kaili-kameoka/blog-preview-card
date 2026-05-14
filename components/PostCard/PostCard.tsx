@@ -45,7 +45,9 @@ function PostCard({
         <p className="PostCard__Category TextPreset3Bold">{category}</p>
         <p className="PostCard__Published TextPreset3">{publishedAt}</p>
         <h1 className="PostCard__Title TextPreset1">
-          <Link href={url}>{title}</Link>
+          <Link className="PostCard__TitleLink" href={url}>
+            {title}
+          </Link>
         </h1>
         <p className="PostCard__Description TextPreset2">{description}</p>
       </div>
